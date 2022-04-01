@@ -1,0 +1,37 @@
+.mapboxgl-popup {
+    background-color: #002244;
+    color: rgb(19, 16, 16);
+    width: auto;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.first, .second, .third, .fourth, .fifth{
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.first{ 
+    /* here p block is like a layer on the map */
+    /* background-color: white; */
+background-image: url('vac1.png');
+}
+
+.second{
+    background-image: url('vac2.png');
+}
+
+.third{
+    background-image: url('vac3.png');
+}
+
+.fourth{
+    background-image: url('vac4.png');
+}
+
+.fifth{
+    background-image: url('vac5.png');
+}
