@@ -135,62 +135,148 @@
 
 /* news section */
 .news{
-    height: 150px;
-    overflow: hidden;
-    font-size: 2rem;
+    height: 70px;
+    /* overflow: hidden; */
+    font-size: 1.4rem;
     text-align: center;
 }
 .newslide{
-    animation: showcase 10s linear infinite;
+    animation: showcase 55s linear infinite;
     font-weight: bold;
+    display: inline-flex;
+    margin-left: -300px;
 }
 .newslide div{
     margin: 20px;
+    display: inline-block;
+    width: 800px;
 }
 @keyframes showcase{
-    0%{margin-top: 0px;}
-    5%{margin-top: -10px;}
-    10%{margin-top: -20px;}
-    15%{margin-top: -30px;}
-    20%{margin-top: -40px;}
-    25%{margin-top: -50px;}
-    30%{margin-top: -60px;}
-    35%{margin-top: -70px;}
-    40%{margin-top: -80px;}
-    45%{margin-top: -90px;}
-    50%{margin-top: -100px;}
-    55%{margin-top: -110px;}
-    60%{margin-top: -120px;}
-    70%{margin-top: 140px;}
-    65%{margin-top: -130px;}
-    75%{margin-top: -150px;}
-    85%{margin-top: -170px;}
-    80%{margin-top: -160px;}
-    90%{margin-top: -180px;}
-    95%{margin-top: -190px;}
-    100%{margin-top: -200px;}
+    0%{margin-left: 0px;}
+    100%{margin-left: -10000px;}
 }
 .newslide div:nth-child(2n+1){
     color: #ffc107;
 }
 
-/* new features styling */
 
-/* .timeline-divider{
-    height: 308vh;
-    width: 1%;
-    position: absolute;
-    top: 100%;
-    left: 2%;
-    border: 4px dashed rgb(21, 179, 241);
-    border-right: 0px;
+/* adding dark mode */
+.toggle{
+    text-align: center;
 }
-.timeline-traveller{
-    position:sticky;
-    top: 40%;
-    margin-left: -10px;
-    transform: rotate(90deg);
-    color: #05295e;
-    height: 25px;
-    z-index: 2;
-} */
+
+.switch{
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(196, 199, 199);
+    border-radius: 50px;
+    position: absolute;
+    transition: 0.2s;
+    cursor: pointer;
+    right: 10px;
+    top: 45px;
+}
+.switch::before{
+    position:absolute;
+    content: '';
+    top: 1px;
+    left: 2.5px;
+    background-image: url(images/moon-solid.svg);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transition:all 0.3s;
+    color: white;
+}
+
+.dark{
+    background-color: #202020;
+}
+
+body.dark h1{
+    color: white;
+}
+body.dark .switch::before{
+    left: 19px;
+    background-image: url(images/sun-solid.svg);
+}
+body.dark .container{
+    color: white;
+}
+#graph{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.699),rgba(0, 0, 0, 0.904)),url(images/graph.jpg);
+    background-size: 1000px;
+    background-position:left;
+    transition: all 0.5s;
+}
+#graph:hover{
+    transform: scale(1.1);
+}
+#features{
+    height: 100vh;
+    background: linear-gradient(rgba(14, 19, 126, 0.815),rgba(10, 67, 160, 0.947));
+}
+body.dark #features{
+    background: linear-gradient(rgba(100, 99, 99, 0.815),rgba(41, 43, 46, 0.947));
+}
+.msg-container{
+    width: 600px;
+    height: 280px;
+    position: relative;
+    left: 14%;
+    top: 57%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+.symtoms-slider{
+    display: inline-flex;
+    transition: 0.5s;
+}
+.msg-col{
+    width: 600px;
+    height: 280px;
+}
+.msg-col h1{
+    color: rgb(236, 235, 235);
+    font-size: 80px;
+    font-weight: 100;
+    margin: 10px 0;
+}
+.msg-col p{
+    color: rgb(255, 251, 251);
+    font-size: 15px;
+    line-height: 25px;
+}
+.controller{
+    width: 1px;
+    height: 320px;
+    display: block;
+    background: #ffc107;
+    position: absolute;
+    right: 50px;
+    transform: translateY(-50%);
+    transition:all 0.3s;
+}
+.controller:hover{
+    width: 2.3px;
+}
+#line1,#line2,#line3,#line4{
+    height: 80px;
+    width: 10px;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+#active{
+    width: 3px;
+    height: 80px;
+    border-radius: 10px;
+    background: rgb(214, 152, 28);
+    position: absolute;
+    top: 0px;
+    transform: translateX(-1.5px);
+    transition: 0.5s;
+}
+#active:hover{
+    width: 5px;
+}

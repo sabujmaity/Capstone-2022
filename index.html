@@ -12,38 +12,7 @@
     <title>Vaccine Analyser</title>
 </head>
 <body>
-
-    <!-- navbar -->
-    <!-- <nav class="navbar navbar-expand-lg  navbar-dark py-3 fixed-top">
-        <div class="container">
-            <a href="#" class="navbar-brand">Vaccination Analyser</a>
-            <button class="navbar-toggler" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navmenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navmenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="#visualiser" class="nav-link">Visualiser</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Analysis</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#questions" class="nav-link">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#team" class="nav-link">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#enroll">Sign Up</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
+        <span class="switch"></span>
 
 <!-- Showcase -->
     <section class="first-page">
@@ -53,7 +22,7 @@
             <h1 class="text-light">Vaccine Analyser</h1>
             <ul>
                 <li><a href="#news">News</a></li>
-                <li><a href="#visualiser">Visualizer</a></li>
+                <li><a href="#features">Features</a></li>
                 <li><a href="#maps">World Data</a></li>
                 <li><a href="#graph">Graph</a></li>
                 <li><a href="#question">FAQs</a></li>
@@ -85,71 +54,39 @@
             
         </div>
 
-
-        <!-- <div class="container">
-            <div  class="d-md-flex justify-content-between align-items-center">
-                <h3 class="mb-3 mb-md-0">Sign Up for newsletter</h3>
-                <div class="input-group">
-                    <input type="text" class="form-control news-input" placeholder="Enter Email" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-dark btn-lg" type="button">Sign Up</button>
-                  </div>
-            </div>
-        </div> -->
     </section>
 
-<aside>
+
     <!-- Boxes -->
-    <section class="p-5" id="visualiser">
-        <div class="row text-center g-4">
-            <div class="col-md">
-                <div class="card bg-dark text-light">
-                    <div class="card-body text-center">
-                        <div class="h1 mb-3">
-                            <i class="bi bi-laptop"></i>
-                        </div>
-                        <h3 class="card-title mb-3">
-                            Symptoms
-                        </h3>
-                        <p class="card-text">
-                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse praesentium iste harum, quae porro nostrum. 
-                        </p>
-                        <a href="" class="btn btn-primary">Read More</a>
-                    </div>
+    <section class="p-5" id="features">
+        <div class="msg-container">
+            <div class="symtoms-slider">
+                <div class="msg-col">
+                    <h1>Powerful</h1>
+                    <p>We have built a highly powerful and efficient tool which can run on any machine.It is very light weight too which means you can use this tool in low bandwidth connection as well.</p>
                 </div>
-            </div>
-            <div class="col-md">
-                <div class="card bg-secondary text-light">
-                    <div class="card-body text-center">
-                        <div class="h1 mb-3">
-                            <i class="bi bi-laptop"></i>
-                        </div>
-                        <h3 class="card-title mb-3">
-                            Prevention 
-                        </h3>
-                        <p class="card-text">
-                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse praesentium iste harum, quae porro nostrum. 
-                        </p>
-                        <a href="" class="btn btn-primary">Read More</a>
-                    </div>
+                <div class="msg-col">
+                    <h1>Gestures Reader</h1>
+                    <p>Our team designed a highly trained and advanced tool powered by advanced machine learning algorithms which can detect and read customers hand gestures which will indicate whether they are vaccinated or not with an accuracy of 95%.</p>
                 </div>
-            </div>
-            <div class="col-md">
-                <div class="card bg-dark text-light">
-                    <div class="card-body text-center">
-                        <div class="h1 mb-3">
-                            <i class="bi bi-people"></i>
-                        </div>
-                        <h3 class="card-title mb-3">
-                            Variants
-                        </h3>
-                        <p class="card-text">
-                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse praesentium iste harum, quae porro nostrum. 
-                        </p>
-                        <a href="" class="btn btn-primary">Read More</a>
-                    </div>
+                <div class="msg-col">
+                    <h1>Advanced Graph</h1>
+                    <p>Our team designed a very advanced graph analysis tool which can analyse the current statistics of the world in real time.You do not need to worry about about outdated data because out data constanly updates in real time Covid counts.</p>
+                </div>
+                <div class="msg-col">
+                    <h1>In-house navigation</h1>
+                    <p>We designed a in-house advanced mapping system which will fetch data from all over the world and provide you the details of the locations in real time.Our map also feature some advanced filters which will indicate the vaccine status near you.</p>
                 </div>
             </div>
         </div>
+        <div class="controller">
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="line3"></div>
+            <div id="line4"></div>
+            <div id="active"></div>
+        </div>
+        
     </section>
 
     <!-- Learn scrtion -->
@@ -175,7 +112,7 @@
         </div>
     </section>
 
-
+<!-- graph section -->
     <section id="graph" class="p-5 bg-dark text-light">
         <div class="container">
             <div class="row align-items-center justify-content-between">
@@ -192,9 +129,9 @@
                         <i class="bi bi-chevron-right"></i>Read More
                     </a>
                 </div>
-                <div class="col-md">
+                <!-- <div class="col-md">
                     <img src="images/graph.jpg" alt="" class="img-fluid">
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -339,13 +276,14 @@
 
     <!-- new features testing -->
 
-    <!-- <div class="timeline-divider">
+     <!-- <div class="timeline-divider">
         <div class="timeline-traveller">
             <i class="fas fa-plane fa-2x plane"></i>
         </div>
-    </div> 
-</aside> -->
+    </div>  -->
 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
