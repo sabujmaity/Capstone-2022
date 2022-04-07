@@ -348,7 +348,10 @@ body.dark #graph .btn{
     padding: 10px!important;
     font-size: 1rem;
 }
-
+body.dark #maps .btn:hover,
+body.dark #graph .btn:hover{
+    background-color: #86121e!important;
+}
 /*                   contact section */
 #contact{
     color: black;
@@ -372,15 +375,22 @@ body.dark #contact .section-heading{
     flex-direction: column;
     width: 40%;
 }
-.details-input input,.details-input textarea{
+form{
+    text-align: center;
+}
+.details-input input,
+.details-input textarea{
     background-color: transparent;
     border: 0px;
     border-bottom: 2px solid rgb(126, 123, 123);
     padding: 4px;
     padding-left: 10px;
     outline: none;
+    width: 100%;
+    margin-bottom: 20px;
 }
-body.dark .details-input input,.details-input textarea{
+body.dark .details-input input,
+body.dark .details-input textarea{
     border-color: white;
     color: white;
 }
@@ -396,6 +406,14 @@ body.dark .details-input input,.details-input textarea{
     font-weight: bold;
     align-self: center;
     margin-top: 20px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.submit-btn:hover{
+    background-color: #0c56c4;
+}
+body.dark .btn:hover{
+    background-color: #86121e!important;
 }
 body.dark .submit-btn{
     background-color: #dc3545!important;
@@ -425,34 +443,101 @@ body.dark .my-details p{
     }
 }
 
+/* feedback alert design */
 .alert{
-    position: absolute;
+    position: fixed;
     top: 25px;
-    right: 30px;
+    right: 25px;
+    width: 350px;
+    height: 70px;
     border-radius: 12px;
     background: #fff;
     padding: 20px 35px 20px 25px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     border-left: 6px solid #ffc107;
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+body.dark .alert{
+    border-left:6px solid #dc3545;
+}
+.alert.active{
+    transform: translateX(0%);
 }
 .alert .alert-content{
     display: flex;
     align-items: center;
+    position: absolute;
+    top: 10px;
 }
 .alert-content .check{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     background-color: #ffc107;
     color: #fff;
     font-size: 20px;
     border-radius: 50%;
 }
+body.dark .alert-content .check{
+    background-color: #dc3545;
+}
 .alert-content .message{
     display: flex;
     flex-direction: column;
     margin: 0 20px;
-
+}
+.alert-content .message span{
+    font-size: 1rem;
+}
+.message .text{
+    font-size: 20px;
+    font-weight: 400;
+    color: #666666;
+}
+.message .text.text1{
+    font-weight: 600;
+    color: #333;
+}
+.alert .close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.alert .close:hover{
+    opacity: 1;
+}
+.alert .progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: #ddd;
+}
+.alert .progress::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffc107;
+}
+body.dark .alert .progress::before{
+    background-color: #dc3545;
+}
+.progress.active::before{
+    animation: progress 5s linear forwards;
+}
+@keyframes progress {
+    100%{
+        right: 100%;
+    }
 }
