@@ -205,7 +205,7 @@ body.dark .container{
     color: white;
 }
 #graph{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.699),rgba(0, 0, 0, 0.904)),url(../images/graph.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.804),rgba(0, 0, 0, 0.868)),url(../images/graph.jpg);
     background-size: 1000px;
     background-position:left;
     transition: all 0.5s;
@@ -286,7 +286,7 @@ body.dark .bg-primary{
     background-color: rgb(31, 30, 30)!important;
 }
 body.dark .bg-light{
-    background-color: rgba(96, 43, 43, 0.555)!important;
+    background-color: #dc3545!important;
     color: white;
 }
 /* team section */
@@ -322,4 +322,137 @@ body.dark .bi-instagram:hover{
 }
 body.dark .bi-linkedin:hover{
     color: #0e76a8!important;
+}
+
+body.dark #question .accordion-button{
+    background-color: #dc3545!important;
+    color: white;
+}
+
+body.dark #question .accordion-body{
+    background-color: #dc354673!important;
+    color: black;
+}
+
+.accordion-item{
+    border-radius: 20px;
+}
+
+/* maps */
+
+body.dark #maps .btn,
+body.dark #graph .btn{
+    background-color: #dc3545!important;
+    border: none;
+    color: white;
+    padding: 10px!important;
+    font-size: 1rem;
+}
+
+/*                   contact section */
+#contact{
+    color: black;
+    height:500px;
+}
+#contact .section-heading{
+    text-align: center;
+    font-size: 2rem;
+}
+body.dark #contact .section-heading{
+    color: white!important;
+}
+.contact-display{
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    margin-left: 10%;
+}
+.details-input{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.details-input input,.details-input textarea{
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 2px solid rgb(126, 123, 123);
+    padding: 4px;
+    padding-left: 10px;
+    outline: none;
+}
+body.dark .details-input input,.details-input textarea{
+    border-color: white;
+    color: white;
+}
+.my-details{
+    width: 40%;
+}
+.submit-btn{
+    background-color: #0d6efd;
+    border: 2px solid white;
+    padding: 8px;
+    width: 40%;
+    color: white;
+    font-weight: bold;
+    align-self: center;
+    margin-top: 20px;
+}
+body.dark .submit-btn{
+    background-color: #dc3545!important;
+    color: white;
+    font-size: 1rem;
+    border: 3px solid #86121e;
+}
+.my-details h4,
+.my-details p{
+    color: rgb(20, 20, 20);
+}
+body.dark .my-details h4,
+body.dark .my-details p{
+    color: white;
+}
+.my-details p{
+    font-size: 0.9rem;
+}
+
+.details-input .submit-btn{
+    word-wrap: break-word;
+    width: 53%;
+}
+@media screen and (max-width:720px){
+    .details-input .btn{
+        width: 70%;
+    }
+}
+
+.alert{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    border-radius: 12px;
+    background: #fff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-left: 6px solid #ffc107;
+}
+.alert .alert-content{
+    display: flex;
+    align-items: center;
+}
+.alert-content .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    background-color: #ffc107;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+.alert-content .message{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+
 }

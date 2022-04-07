@@ -20,31 +20,20 @@ app.get('',(req,res) => {
 app.get('/worldMap',(req,res)=>{
     res.render('worldMap')
 });
-app.get('/register', (req,res)=>{
-    res.render('register')
-});
 
-app.post('/register' , async (req,res)=>{
+app.post('' , async (req,res)=>{
     try{
-        const password = req.body.password;
-        const cpassword = req.body.confirmpassword;
+        const name = req.body.name;
         const email = req.body.email;
-        const useremail = await Register.findOne({email:email});
-        res.send(useremail);
-        console.log(useremail);
-        if(password ===  cpassword){
-            const newuser = new Register({
-                name : req.body.name,
-                email: req.body.email,
-                password: password,
-                confirmpassword: cpassword
-            });
-            const registered = await newuser.save();
-            res.status(201).render('index');
-        }
-        else{
-            res.send('passwords not matching')
-        }
+        const feedback = req.body.feedback;
+        const newfeedback = new Register({
+            name : name,
+            email: email,
+            feedback: feedback
+        });
+        console.log(newfeedback);
+        const registered = await newfeedback.save();
+        res.status(201);
     }
     catch(error){
         res.status(400).send(error);

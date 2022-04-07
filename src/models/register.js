@@ -7,18 +7,13 @@ const employeeSchema = new mongoose.Schema({
     },
     email: {
         type: String,
-        required: true,
-        unique:true
-    },
-    password: {
-        type: String,
         required: true
     },
-    confirmpassword: {
+    feedback: {
         type: String,
         required: true
     }
 })
 
-const Register = new mongoose.model('Accountinfo', employeeSchema );
+const Register = new mongoose.model('Feedback', employeeSchema );
 module.exports = Register;
