@@ -200,6 +200,7 @@ body.dark h1{
 body.dark .switch::before{
     left: 19px;
     background-image: url(../images/sun-solid.svg);
+    color: yellow;
 }
 body.dark .container{
     color: white;
