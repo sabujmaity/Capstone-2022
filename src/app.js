@@ -31,7 +31,7 @@ app.post('' , async (req,res)=>{
             email: email,
             feedback: feedback
         });
-        console.log(newfeedback);
+        console.log(newfeedback)
         const registered = await newfeedback.save();
         res.status(201);
     }
