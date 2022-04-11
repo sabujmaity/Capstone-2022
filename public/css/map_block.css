@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body{
+    background-color:#210038 ;
+} */
+.main{
+    border-left: 15px solid #23297a;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 40px 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px;
+}
+#map{
+    /* border: 3px solid blue; */
+    border-radius: 10px;
+    width: 1000px;
+    height: 600px;
+}
+
+#container{
+    /* border: 3px solid black; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* width: 1000px;       cant apply coz element will lost flex property */
+}
+.main:hover{
+    background-color: rgb(231, 227, 227);
+}
+
+.block{
+    /* padding: 0px; */
+    color:#23297a;
+    background-color: white;
+    box-shadow: 1px 1px 12px;
+    width: 220px;
+    margin: 20px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: 250ms ease-in-out;
+}
+
+.block:hover{
+    transform: scale(1.1);
+    color: #23297a;
+    /* background-color: #23297a; */
+    cursor: pointer;
+    /* box-shadow: none; */
+    border-radius: 5px;
+}
+
+@media (max-width:1376px){
+    #container{
+        flex-direction: row;
+    }
+
+    .main{
+        justify-content: center;
+        border-top: 10px solid #23297a;
+        border-left: 0px;
+        margin: 0px;
+    }
+    #map{
+        margin: 0px 5px;
+    }
+}
+
+.span-ele{ 
+    display: block;
+    background-color: #23297a;
+    transition: width 0.5s;
+    position: absolute;
+    width: 0px;
+    height: 3px;
+}
+
+.block:hover > .span-ele{
+    width: 220px;
+    border-radius: 5px 5px 0px 0px;
+}
+

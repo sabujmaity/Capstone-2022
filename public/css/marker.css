@@ -1,0 +1,65 @@
+.mapboxgl-popup {
+    background-color: #002244;
+    color: rgb(19, 16, 16);
+    width: auto;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.first, .second, .third, .fourth, .fifth{
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.sixth, .seventh, .eight, .nine{
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.first{ 
+    /* here p block is like a layer on the map */
+    /* background-color: white; */
+background-image: url('/images/vac1.png');
+}
+
+.second{
+    background-image: url('/images/vac2.png');
+}
+
+.third{
+    background-image: url('/images/vac3.png');
+}
+
+.fourth{
+    background-image: url('/images/vac4.png');
+}
+
+.fifth{
+    background-image: url('/images/vac5.png');
+}
+
+.sixth{
+    background-image: url('/images/vac6.png');
+}
+
+.seventh{
+    background-image: url('/images/vac7.png');
+}
+
+.eight{
+    background-image: url('/images/vac8.png');
+}
+
+.nine{
+    background-image: url('/images/vac9.png');
+}
