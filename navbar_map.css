@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+.header {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    background-color: #191970;
+    border-radius: 0px 0px 5px 5px;
+	box-shadow: 0px 10px 25px black;
+}
+
+.vaccine-visualizer{
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: default;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 2px;
+}
+
+.main-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.logo {
+	margin: 0;
+	font-size: 1.45em;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+
+.logo .vaccine-visualizer,
+.main-nav .nav-lines {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.main-nav .nav-lines {
+    color: orange;
+	font-size: .99em;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+}
+
+.main-nav .nav-lines:hover {
+    color: #fff;
+}
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	
+	}
+
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}

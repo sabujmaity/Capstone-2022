@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- below link is for pointer CSS -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- below script is for world map fetching -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link rel="stylesheet" href="marker.css">
+    <link rel="stylesheet" href="map_block.css">
+    <link rel="stylesheet" href="navbar_map.css">
+    <link rel="stylesheet" href="heading.css">
+    <link rel="stylesheet" href="description.css">
+    <link rel="stylesheet" href="Analysis_cards.css">
+    <link rel="stylesheet" href="graph.css">
+    <title>World map</title>
+</head>
+
+<body>
+
+  <header class="header">
+		<h1 class="logo"><a class="vaccine-visualizer">Vaccine Visualization</a></h1>
+      <ul class="main-nav">
+          <li><a href="#analysis" class="nav-lines">Analysis</a></li>
+          <li><a href="#" class="nav-lines">Home</a></li>
+      </ul>
+	</header> 
+
+
+    <div id="below-nav">
+        <div id="worldMap-heading">
+            <h1>World Map</h1>
+        </div>
+        <div id="para">
+            <p>
+                World Map used to visualize the vaccination data of different countries as of the latest date
+                possible.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="main">
+        <div id="container">
+            <div class="block" id="T_vac" style="background-color: #23297a; color: whitesmoke;"><span class="span-ele"></span>Total Vaccination</div>
+            <div class="block" id="T_boo"><span class="span-ele"></span>Total Boosters</div>
+            <div class="block" id="D_vac"><span class="span-ele"></span>Daily Vaccination</div>
+            <div class="block" id="P_vac"><span class="span-ele"></span>People Vaccinated</div>
+            <div class="block" id="P_f_vac"><span class="span-ele"></span>People Fully Vaccinated</div>
+        </div>
+        <div id='map'></div>
+    </div>
+
+    
+    <div id="below-worldMap">
+        <div id="worldMap-description">
+            <p>Description</p>
+        </div>
+        <div id="list-box">
+            <ul class="list-ul">
+                <li>
+                    <b style="font-size: 25px;">Total Vaccinations</b> : Total number of doses administered. For vaccines that require multiple doses, each
+                    individual dose is counted. If a person receives one dose of the vaccine, this metric goes up by 1. If they
+                    receive a second dose, it goes up by 1 again. If they receive a third/booster dose, it goes up by 1 again.
+
+                </li>
+
+                <li>
+                    <b style="font-size: 25px;">Daily Vaccinations</b> : New doses administered per day (7-day smoothed). For countries that don't report data on a
+                    daily basis, we assume that doses changed equally on a daily basis over any periods in which no data was
+                    reported. This produces a complete series of daily figures, which is then averaged over a rolling 7-day window.
+                </li>
+                
+                <li>
+                    <b style="font-size: 25px;">People Fully Vaccinated</b> : Total number of people who received all doses prescribed by the initial vaccination
+                    protocol. If a person receives the first dose of a 2-dose vaccine, this metric stays the same. If they receive
+                    the second dose, the metric goes up by 1.
+                </li>
+                
+                <li>
+                    <b style="font-size: 25px;">People Vaccinated</b> : Total number of people who received at least one vaccine dose. If a person receives the first
+                    dose of a 2-dose vaccine, this metric goes up by 1. If they receive the second dose, the metric stays the same.
+                </li>
+                
+                <li>                    
+                    <b style="font-size: 25px;">Total Boosters</b> : Total number of COVID-19 vaccination booster doses administered (doses administered beyond the
+                    number prescribed by the initial vaccination protocol)
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div class="card-container">
+        <div class="heading">
+          <h1 id="analysis">Analysis</h1>
+        </div>
+        <div class="row">
+  
+          <div class="card" data-tilt data-tilt-scale="1.05">
+            <div class="card-header">
+              <h2>Total vaccination per hundered</h2>
+            </div>
+            <div class="card-body">
+              <p>
+                Total vaccinations per 100 people in the total population of the country.
+              </p>
+              <a href="#map" id="analysis_1" class="btn">Display on map</a>
+            </div>
+          </div>
+  
+          <div class="card" data-tilt data-tilt-scale="1.05">
+            <div class="card-header">
+              <h2>People vaccinated per hundred</h2>
+            </div>
+            <div class="card-body">
+              <p>
+                People vaccinated per 100 people in the total population of the country.
+              </p>
+              <a href="#map" id="analysis_2" class="btn">Display on map</a>
+            </div>
+          </div>
+  
+          <div class="card" data-tilt data-tilt-scale="1.05">
+            <div class="card-header">
+              <h3>People Fully vaccinated per hundred</h3>
+            </div>
+            <div class="card-body">
+              <p>
+                People fully vaccinated per 100 people in the total population of the country.
+              </p>
+              <a href="#map" id="analysis_3" class="btn">Display on map</a>
+            </div>
+          </div>
+  
+          <div class="card" data-tilt data-tilt-scale="1.05">
+            <div class="card-header">
+              <h2>Total boosters per hundred</h2>
+            </div>
+            <div class="card-body">
+              <p>
+                Total boosters per 100 people in the total population of the country.
+              </p>
+              <a href="#map" id="analysis_4" class="btn">Display on map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+
+      <div id="chart_analysis">
+        <div id="chart_container">
+            <div id="chart_text">Analysis of Daily vaccination per million</div>
+            <canvas id="myChart"></canvas>
+            <input oninput="updateSTART(this)" type="range" id="start" value="0">
+            <input oninput="updateEND(this)" type="range" id="end">
+        </div>
+        <div class="chart_button">
+          <button onclick="past_7_days()" id="P_7_days">Past 30 days</button>
+            <button onclick="line_chart()" id="L_chart">Line chart</button>
+            <button onclick="bar_chart()" id="B_chart">Bar chart</button>
+        </div>
+    </div>
+
+    
+    <!-- below script for marker+popup -->
+    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+    <script src="map.js"></script>
+    <script src="vanilla-tilt.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+        integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="graph.js"></script>
+</body>
+</html>

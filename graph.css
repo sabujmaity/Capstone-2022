@@ -1,0 +1,149 @@
+
+#chart_analysis{
+    /* border: 3px solid blueviolet; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    margin-bottom: 70px;
+}
+
+#chart_container{
+    width: 1200px;
+    height: 650px;
+    /* border: 3px solid red; */
+}
+
+#myChart{
+    width: 1200px;
+    height: 500px;
+    /* border: 3px solid blue; */
+}
+
+#chart_text{
+    text-align: center;
+    font-size: 30px;
+    background-color:brown;
+    color: whitesmoke;
+}
+
+#start, #end{
+    width: 500px;
+    cursor: pointer;
+}
+
+.chart_button{
+    display: flex;
+    /* border: 2px solid red; */
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#L_chart, #B_chart, #P_7_days{
+    background-color:palegoldenrod;
+    background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+@media screen and (max-width:1380px) {
+    #chart_container{
+        width: 900px;
+        height: 700px;
+        
+        align-self: center;
+        /* border: 3px solid red; */
+    }
+
+    #chart_analysis{
+        flex-direction: column;
+
+    }
+
+    .chart_button{
+        margin-top: 100px;
+        display: inline;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width:910px) {
+    #chart_container{
+        width: 600px;
+        height: 600px;
+        
+        align-self: center;
+        /* border: 3px solid red; */
+    }
+
+    #chart_analysis{
+        flex-direction: column;
+
+    }
+
+    .chart_button{
+        margin-top: 100px;
+        display: inline;
+        align-self: center;
+    }
+}
+
+
+@media screen and (max-width:610px) {
+    #chart_container{
+        width: 400px;
+        height: 250px;
+        
+        align-self: center;
+    }
+    #start , #end{
+        padding: 0;
+        margin: 0;
+        width: 350px;
+        align-self: center;
+    }
+
+    #chart_analysis{
+        flex-direction: column;
+
+    }
+
+    .chart_button{
+        margin-top: 150px;
+        display: inline;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width:300px) {
+    #chart_container{
+        width: 290px;
+        height: 250px;
+        
+        align-self: center;
+    }
+    #start , #end{
+        padding: 0;
+        margin: 0;
+        width: 250px;
+        align-self: center;
+    }
+
+    #chart_analysis{
+        flex-direction: column;
+
+    }
+
+    .chart_button{
+        margin-top: 150px;
+        display: inline;
+        align-self: center;
+    }
+}
