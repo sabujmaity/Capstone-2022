@@ -7,13 +7,13 @@ var myChart;
 fetch("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json")
   .then(res => res.json())
   .then(point_data => {
-    console.log(point_data);
+    // console.log(point_data);
     full_data = point_data;
     abcd(full_data, 'bar')
   });
 
 function abcd(full_data, chart_type) {
-  console.log(full_data[96].data.length);
+  // console.log(full_data[96].data.length);
   document.getElementById('start').min = 1;
   document.getElementById('start').max = full_data[96].data.length;
   document.getElementById('end').max = full_data[96].data.length;
@@ -59,8 +59,8 @@ function abcd(full_data, chart_type) {
   );
 
 
-  console.log(data_of_dates);
-  console.log(data_of_D_V_P_M);
+  // console.log(data_of_dates);
+  // console.log(data_of_D_V_P_M);
 
 }
 
@@ -89,7 +89,7 @@ const start = document.getElementById('start');
 const end = document.getElementById('end');
 
 function updateSTART(range) {
-  console.log(range.value);
+  // console.log(range.value);
   const minX = data_of_dates.slice(range.value - 1, end.value);
   const minY = data_of_D_V_P_M.slice(range.value - 1, end.value);
   const minY2 = data_of_D_V_P_M2.slice(range.value - 1, end.value);
