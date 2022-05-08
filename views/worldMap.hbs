@@ -23,7 +23,7 @@
   <header class="header">
 		<h1 class="logo"><a class="vaccine-visualizer">Vaccine Visualization</a></h1>
       <ul class="main-nav">
-          <li><a href="#analysis" class="nav-lines">Analysis</a></li>
+          <li><a href="#analysis" class="nav-lines">Per thousand</a></li>
           <li><a href="/" class="nav-lines">Home</a></li>
       </ul>
 	</header> 
@@ -95,17 +95,17 @@
 
     <div class="card-container">
         <div class="heading">
-          <h1 id="analysis">Analysis</h1>
+          <h1 id="analysis"></h1>
         </div>
         <div class="row">
   
           <div class="card" data-tilt data-tilt-scale="1.05">
             <div class="card-header">
-              <h2>Total vaccination per hundered</h2>
+              <h2>Total vaccination per thousand</h2>
             </div>
             <div class="card-body">
               <p>
-                Total vaccinations per 100 people in the total population of the country.
+                Total vaccinations per 1000 people in the total population of the country.
               </p>
               <a href="#map" id="analysis_1" class="btn">Display on map</a>
             </div>
@@ -113,11 +113,11 @@
   
           <div class="card" data-tilt data-tilt-scale="1.05">
             <div class="card-header">
-              <h2>People vaccinated per hundred</h2>
+              <h2>People vaccinated per thousand</h2>
             </div>
             <div class="card-body">
               <p>
-                People vaccinated per 100 people in the total population of the country.
+                People vaccinated per 1000 people in the total population of the country.
               </p>
               <a href="#map" id="analysis_2" class="btn">Display on map</a>
             </div>
@@ -125,11 +125,11 @@
   
           <div class="card" data-tilt data-tilt-scale="1.05">
             <div class="card-header">
-              <h3>People Fully vaccinated per hundred</h3>
+              <h3>People Fully vaccinated per thousand</h3>
             </div>
             <div class="card-body">
               <p>
-                People fully vaccinated per 100 people in the total population of the country.
+                People fully vaccinated per 1000 people in the total population of the country.
               </p>
               <a href="#map" id="analysis_3" class="btn">Display on map</a>
             </div>
@@ -137,11 +137,11 @@
   
           <div class="card" data-tilt data-tilt-scale="1.05">
             <div class="card-header">
-              <h2>Total boosters per hundred</h2>
+              <h2>Total boosters per thousand</h2>
             </div>
             <div class="card-body">
               <p>
-                Total boosters per 100 people in the total population of the country.
+                Total boosters per 1000 people in the total population of the country.
               </p>
               <a href="#map" id="analysis_4" class="btn">Display on map</a>
             </div>
@@ -152,7 +152,7 @@
 
       <div id="chart_analysis">
         <div id="chart_container">
-            <div id="chart_text">Analysis of Daily vaccination per million</div>
+            <div id="chart_text">Comparison of Daily vaccination per lakh</div>
             <canvas id="myChart"></canvas>
             <input oninput="updateSTART(this)" type="range" id="start" value="0">
             <input oninput="updateEND(this)" type="range" id="end">

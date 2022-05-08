@@ -13,15 +13,15 @@ fetch("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/v
   });
 
 function abcd(full_data, chart_type) {
-  console.log(full_data[96].data.length);
+  // console.log(full_data[96].data.length);
   document.getElementById('start').min = 1;
   document.getElementById('start').max = full_data[96].data.length;
   document.getElementById('end').max = full_data[96].data.length;
   document.getElementById('end').value = full_data[96].data.length;
   for (let i = 0; i < full_data[96].data.length; i++) {
     data_of_dates.push(full_data[96].data[i].date);
-    data_of_D_V_P_M.push(full_data[96].data[i].daily_vaccinations_per_million);
-    data_of_D_V_P_M2.push(full_data[222].data[i].daily_vaccinations_per_million);
+    data_of_D_V_P_M.push((full_data[96].data[i].daily_vaccinations_per_million/10));
+    data_of_D_V_P_M2.push((full_data[222].data[i].daily_vaccinations_per_million/10));
   }
 
   const data = {
@@ -33,7 +33,7 @@ function abcd(full_data, chart_type) {
       data: data_of_D_V_P_M,
     },
     {
-      label: 'United States',
+      label: 'United States of America',
       backgroundColor: 'rgb(255, 165, 0)',
       borderColor: 'rgb(255, 165, 0)',
       data: data_of_D_V_P_M2
@@ -59,8 +59,8 @@ function abcd(full_data, chart_type) {
   );
 
 
-  console.log(data_of_dates);
-  console.log(data_of_D_V_P_M);
+  // console.log(data_of_dates);
+  // console.log(data_of_D_V_P_M);
 
 }
 
@@ -75,7 +75,7 @@ function line_chart() {
   myChart.update();
 }
 
-function past_7_days(){
+function past_30_days(){
   const seven = data_of_dates.slice((data_of_dates.length-30));
   const seven_data = data_of_D_V_P_M.slice((data_of_D_V_P_M.length-30));
   const seven_data2 = data_of_D_V_P_M2.slice((data_of_D_V_P_M2.length-30));
@@ -89,7 +89,7 @@ const start = document.getElementById('start');
 const end = document.getElementById('end');
 
 function updateSTART(range) {
-  console.log(range.value);
+  // console.log(range.value);
   const minX = data_of_dates.slice(range.value - 1, end.value);
   const minY = data_of_D_V_P_M.slice(range.value - 1, end.value);
   const minY2 = data_of_D_V_P_M2.slice(range.value - 1, end.value);
