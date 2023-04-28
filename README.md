@@ -7,4 +7,4 @@ are Dynamically updated everyday
 custom gestures has been implemented using YOLO Algorithm as the
 priority was speed and efficiency
 - The social benefit is that itrecognises the vaccination status using sign
-language which will help mute and deaf people to interact efficientl
+language which will help mute and deaf people to interact efficiently
