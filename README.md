@@ -10,6 +10,9 @@ priority was speed and efficiency
 - The social benefit is that itrecognises the vaccination status using sign
 language which will help mute and deaf people to interact efficiently
 
+
+### Gesture Recognition Video Link : https://drive.google.com/file/d/19fgt6xSuFBPp0nHms4mFUVy1rbFlvSPL/view?usp=sharing
+
 # Breakdown of our Vaccine Visualizer Website:
 ### Homepage
 ![image](https://user-images.githubusercontent.com/34521697/235128715-a2c702ab-1bcb-4091-81a9-36b80f5f9158.png)
